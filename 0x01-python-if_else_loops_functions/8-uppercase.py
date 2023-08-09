@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 def uppercase(str):
     output = ""
-    
     for n in str:
         if n in 'abcdefghijklmnopqrstuvwxyz':
             a = ord(n)
