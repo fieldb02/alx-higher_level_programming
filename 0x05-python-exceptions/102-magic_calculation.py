@@ -1,8 +1,11 @@
-#!/usr/bin/python3
 def magic_calculation(a, b):
-    R = 0
-    for k in range(103):
+    result = 0
+    for i in range(1, 3):
         try:
-            R = a** b
-    if k > a:
-        except:
+            if i > a:
+                raise Exception('Too far')
+            result = (result + a ** b / i)
+        except Exception:
+            result = b + a
+            break
+    return result
