@@ -1,61 +1,40 @@
 #!/usr/bin/python3
-"""Square Class Definition"""
+"""Define a class Square"""
 
 
 class Square:
-    """Representation of a square geometry.
+    """Represent a square."""
 
-    Attributes:
-        side_length (int): Length of the square's side
-
-    """
-    def __init__(self, side_length=0):
-        """Initialize a Square instance.
+    def __init__(self, size=0):
+        """Initialize a new square.
 
         Args:
-            side_length (int, optional): Length of square's side
-
-        Raises:
-             TypeError: if side_length is not an integer
-             ValueError: If side_length is less than zero
-
-         """
-        self.side_length = side_length
+            size (int): The size of the new square.
+        """
+        self.size = size
 
     @property
-    def side_length(self):
-        """Get the side length property.
+    def size(self):
+        """Get the current size of the square."""
+        return self.__size
 
-        Returns:
-            int: side_length
-        """
-        return self.__side_length
-
-    @side_length.setter
-    def side_length(self, value):
-        """Set the side length property."""
-
+    @size.setter
+    def size(self, value):
+        """Set the size of the square."""
         if not isinstance(value, int):
-            raise TypeError("side_length must be an integer")
+            raise TypeError("size must be an integer")
         elif value < 0:
-            raise ValueError("side_length must be >= 0")
-        else:
-            self.__side_length = value
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
-    def calculate_area(self):
-        """Calculate the area of the square.
+    def area(self):
+        """Calculate the area of the square."""
+        return self.__size * self.__size
 
-        Returns:
-            int: The area of the square
-
-        """
-        return int(self.side_length) ** 2
-
-    def display(self):
-        """Prints the square using '#' characters."""
-
-        if self.side_length > 0:
-            for _ in range(self.side_length):
-                print("#" * self.side_length)
+    def my_print(self):
+        """Print the square with the # character."""
+        if self.__size > 0:
+            for _ in range(self.__size):
+                print("#" * self.__size)
         else:
             print()
