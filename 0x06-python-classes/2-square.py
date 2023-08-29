@@ -1,29 +1,17 @@
 #!/usr/bin/python3
-"""Defining the Square class"""
+"""Defining a new square"""
 
 
 class Square:
-    """Represents a square geometry.
+    """creating a new square."""
 
-    Attributes:
-        side_length (int): Length of the square's side
-
-    """
-
-    def __init__(self, side_length=0):
-        """Initialize a Square instance.
-
+    def __init__(self, size=0):
+        """creating new square.
         Args:
-            side_length (int): Length of the square's side
-
-        Raises:
-            TypeError: If side_length is not an integer
-            ValueError: If side_length is less than zero
-
+            size (int): Size of new square.
         """
-        if not isinstance(side_length, int):
-            raise TypeError("side_length must be an integer")
-        elif side_length < 0:
-            raise ValueError("side_length must be >= 0")
-        else:
-            self.__side_length = side_length
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
