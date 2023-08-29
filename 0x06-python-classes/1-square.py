@@ -3,12 +3,7 @@
 
 
 class Square:
-    """A class representing a square.
-
-    Attributes:
-        side_length (int): Length of the square's side
-
-    """
+    """A class representing a square."""
 
     def __init__(self, side_length):
         """Initialize a Square instance.
