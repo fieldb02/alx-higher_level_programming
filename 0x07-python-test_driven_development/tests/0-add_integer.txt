@@ -1,0 +1,64 @@
+The `add_integer` Module
+============================
+
+Introduction
+---------------------
+
+This is the documentation for the `add_integer` function, which is part of the `add_integer` module.
+
+Usage
+---------------------
+
+To use the `add_integer` function, follow these steps:
+
+1. Import `add_integer` from the `add_integer` module:
+
+    ```python
+    >>> add_integer = __import__('0-add_integer').add_integer
+    ```
+
+2. Now you can use it to add integers:
+
+    ```python
+    >>> add_integer(6, 4)
+    10
+
+    >>> add_integer(6.4, 4)
+    10
+
+    >>> add_integer(9, -2)
+    7
+
+    >>> add_integer(10.3, -0.3)
+    9
+    ```
+
+    Note: `add_integer` can also take a single argument:
+
+    ```python
+    >>> add_integer(4)
+    4
+    ```
+
+Error Handling
+---------------------
+
+The `add_integer` function also handles errors gracefully. For example:
+
+- If one of the arguments is not an integer, it raises a `TypeError` with an appropriate message:
+
+    ```python
+    >>> add_integer(6, 'a')
+    Traceback (most recent call last):
+      ...
+    TypeError: b must be an integer
+    ```
+
+- If one or both arguments are `None`, it raises a `TypeError` with a suitable message:
+
+    ```python
+    >>> add_integer(None)
+    Traceback (most recent call last):
+      ...
+    TypeError: a must be an integer
+    ```
